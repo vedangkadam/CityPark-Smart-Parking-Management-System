@@ -1,0 +1,68 @@
+{
+  "name": "ParkingLot",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "title": "Lot Name"
+    },
+    "address": {
+      "type": "string",
+      "title": "Address"
+    },
+    "lat": {
+      "type": "number",
+      "title": "Latitude"
+    },
+    "lng": {
+      "type": "number",
+      "title": "Longitude"
+    },
+    "total_spots": {
+      "type": "number",
+      "title": "Total Spots",
+      "default": 1
+    },
+    "available_spots": {
+      "type": "number",
+      "title": "Available Spots",
+      "default": 1
+    },
+    "price_per_hour": {
+      "type": "number",
+      "title": "Price Per Hour"
+    },
+    "image_url": {
+      "type": "string",
+      "title": "Image URL"
+    },
+    "amenities": {
+      "type": "string",
+      "title": "Amenities"
+    },
+    "description": {
+      "type": "string",
+      "title": "Description"
+    }
+  },
+  "required": [
+    "name",
+    "address",
+    "lat",
+    "lng",
+    "total_spots",
+    "price_per_hour"
+  ],
+  "rls": {
+    "read": {},
+    "create": {
+      "created_by_id": "{{user.id}}"
+    },
+    "update": {
+      "created_by_id": "{{user.id}}"
+    },
+    "delete": {
+      "created_by_id": "{{user.id}}"
+    }
+  }
+}
